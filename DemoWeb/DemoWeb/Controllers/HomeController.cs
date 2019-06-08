@@ -11,15 +11,7 @@ namespace DemoWeb.Controllers
     {
         public ActionResult Index()
         {
-            using (var db = new SafeFlightContext())
-            {
-
-                var flight = db.Flights.First(y => y.FirstName == "Travis");
-                var user = db.RegisteredUsers.First(z => z.Password == "cucumber");
-
-            }
-
-            return View();
+            return RedirectToAction("Index", "Login");
         }
 
         public ActionResult About()

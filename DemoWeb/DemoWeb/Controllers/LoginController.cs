@@ -17,6 +17,7 @@ namespace DemoWeb.Controllers
         // GET: Login
         public ActionResult Index()
         {
+            ViewBag.LoginPage = true;
             return View();
         }
         
@@ -27,6 +28,8 @@ namespace DemoWeb.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Index([Bind(Include = "Username,Password")] RegisteredUser user)
         {
+            ViewBag.LoginPage = true;
+
             if (!ModelState.IsValid)
             {
                 return View(user);
@@ -42,37 +45,6 @@ namespace DemoWeb.Controllers
             }
             ViewBag.ValidationSummary = "The username/password combination is invalid.";
             return View(user);
-        }
-
-        // GET: Login/Edit/5
-        public ActionResult Edit(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            RegisteredUser registeredUser = db.RegisteredUsers.Find(id);
-            if (registeredUser == null)
-            {
-                return HttpNotFound();
-            }
-            return View(registeredUser);
-        }
-
-        // POST: Login/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "RegisteredUserId,Username,Password")] RegisteredUser registeredUser)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Entry(registeredUser).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            return View(registeredUser);
         }
 
         protected override void Dispose(bool disposing)

@@ -24,6 +24,10 @@
                     <li>@Html.ActionLink("Watch List", "Index", "WatchList")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
+                    @if (ViewBag.LoginPage == null)
+                    {
+                        <li>@Html.ActionLink("Logout", "Index", "Login")</li>
+                    }
                 </ul>
             </div>
         </div>
