@@ -128,6 +128,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\FlightsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\WatchListController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -135,6 +136,10 @@
     <Compile Include="Migrations\201906070001598_Added_RegisteredUsers_Table.cs" />
     <Compile Include="Migrations\201906070001598_Added_RegisteredUsers_Table.Designer.cs">
       <DependentUpon>201906070001598_Added_RegisteredUsers_Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906081925107_general_modifications.cs" />
+    <Compile Include="Migrations\201906081925107_general_modifications.Designer.cs">
+      <DependentUpon>201906081925107_general_modifications.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Flight.cs" />
@@ -191,6 +196,7 @@
     <Content Include="Views\WatchList\Details.cshtml" />
     <Content Include="Views\WatchList\Edit.cshtml" />
     <Content Include="Views\WatchList\Index.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -211,6 +217,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201906070001598_Added_RegisteredUsers_Table.resx">
       <DependentUpon>201906070001598_Added_RegisteredUsers_Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906081925107_general_modifications.resx">
+      <DependentUpon>201906081925107_general_modifications.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -80,3 +80,4 @@ C:\dev\CSharp\VisualStudioProjects\DemoWeb\DemoWeb\DemoWeb\bin\EntityFramework.x
 C:\dev\CSharp\VisualStudioProjects\DemoWeb\DemoWeb\DemoWeb\bin\EntityFramework.SqlServer.xml
 C:\dev\CSharp\VisualStudioProjects\DemoWeb\DemoWeb\DemoWeb\obj\Debug\DemoWeb.Migrations.Added_RegisteredUsers_Table.resources
 C:\dev\CSharp\VisualStudioProjects\DemoWeb\DemoWeb\DemoWeb\obj\Debug\DemoWeb.csproj.GenerateResource.cache
+C:\dev\CSharp\VisualStudioProjects\DemoWeb\DemoWeb\DemoWeb\obj\Debug\DemoWeb.Migrations.general_modifications.resources
