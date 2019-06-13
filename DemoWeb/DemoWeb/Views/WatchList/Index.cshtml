@@ -25,13 +25,13 @@
 
 @foreach (var item in Model) {
     <tr>
-        <td>
+        <td id="bounty">
             @Html.DisplayFor(modelItem => item.Bounty)
         </td>
-        <td>
+        <td id="firstName">
             @Html.DisplayFor(modelItem => item.FirstName)
         </td>
-        <td>
+        <td id="lastName">
             @Html.DisplayFor(modelItem => item.LastName)
         </td>
         <td>
