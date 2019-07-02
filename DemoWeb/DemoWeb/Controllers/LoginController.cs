@@ -35,9 +35,11 @@ namespace DemoWeb.Controllers
                 return View(user);
             }
             
+            // Check if the username exists in the RegisteredUser table
             var u = db.RegisteredUsers.FirstOrDefault(x => x.Username == user.Username);
             if (u != null)
             {
+                // If the password is correct
                 if (u.Password == user.Password)
                 {
                     return RedirectToAction("Index", "Flights");
