@@ -1,0 +1,60 @@
+﻿@model IEnumerable<DemoWeb.ViewModels.FlightListViewModel>
+
+@{
+    ViewBag.Title = "Flight List";
+}
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.WatchList)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DepartureAirport)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DepartureTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ArrivalAirport)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ArrivalTime)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr id="flightRow">
+                <td id="watchList">@Html.DisplayFor(modelItem => item.WatchList)</td>
+                <td id="firstName">@Html.DisplayFor(modelItem => item.FirstName)</td>
+                <td id="lastName">@Html.DisplayFor(modelItem => item.LastName)</td>
+                <td id="departureAirport">@Html.DisplayFor(modelItem => item.DepartureAirport)</td>
+                <td id="departureTime">@Html.DisplayFor(modelItem => item.DepartureTime)</td>
+                <td id="arrivalAirport">@Html.DisplayFor(modelItem => item.ArrivalAirport)</td>
+                <td id="arrivalTime">@Html.DisplayFor(modelItem => item.ArrivalTime)</td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.FlightId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.FlightId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.FlightId })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/FlightIndex")
+}

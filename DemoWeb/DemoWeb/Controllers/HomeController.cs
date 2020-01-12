@@ -16,7 +16,7 @@ namespace DemoWeb.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Use this website to demonstrate test automation with Cucumber, Selenium, Page-Object Model, and AutoIt.";
+            ViewBag.Message = "This demo website was built with C# MVC 5. The automation was built with Java, Cucumber, Selenium, Page-Object Model, and OpenCV.";
 
             return View();
         }
