@@ -13,22 +13,24 @@ namespace DemoWeb
 
             config.Routes.MapHttpRoute(
                 name: "FlightsApi",
-                routeTemplate: "api/flights/{id}",
-                defaults: new { controller = "FlightsApi", id = RouteParameter.Optional }
+                routeTemplate: "api/flights",
+                defaults: new { controller = "ApiFlights" }
             );
 
             config.Routes.MapHttpRoute(
                 name: "WatchListEntriesApi",
                 routeTemplate: "api/watchlist/{id}",
-                defaults: new { controller = "WatchListEntriesApi", id = RouteParameter.Optional }
+                defaults: new { controller = "ApiWatchListEntries", id = RouteParameter.Optional }
             );
 
+            /*
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
-            
+            */        
+
             // Send JSON instead of XML
             GlobalConfiguration.Configuration.Formatters.JsonFormatter.MediaTypeMappings
                 .Add(new System.Net.Http.Formatting.RequestHeaderMapping("Accept",

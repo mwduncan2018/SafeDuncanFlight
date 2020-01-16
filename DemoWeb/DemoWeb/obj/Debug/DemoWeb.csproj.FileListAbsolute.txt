@@ -85,3 +85,4 @@ C:\dev\CSharp\VisualStudioProjects\DemoWeb\DemoWeb\DemoWeb\obj\Debug\DemoWeb.csp
 C:\dev\CSharp\VisualStudioProjects\DemoWeb\DemoWeb\DemoWeb\obj\Debug\DemoWeb.csproj.CopyComplete
 C:\dev\CSharp\VisualStudioProjects\DemoWeb\DemoWeb\DemoWeb\obj\Debug\DemoWeb.dll
 C:\dev\CSharp\VisualStudioProjects\DemoWeb\DemoWeb\DemoWeb\obj\Debug\DemoWeb.pdb
+C:\dev\CSharp\VisualStudioProjects\DemoWeb\DemoWeb\DemoWeb\obj\Debug\DemoWeb.csprojAssemblyReference.cache

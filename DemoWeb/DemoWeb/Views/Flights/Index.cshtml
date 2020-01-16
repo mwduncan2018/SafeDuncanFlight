@@ -46,9 +46,9 @@
                 <td id="arrivalAirport">@Html.DisplayFor(modelItem => item.ArrivalAirport)</td>
                 <td id="arrivalTime">@Html.DisplayFor(modelItem => item.ArrivalTime)</td>
                 <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.FlightId }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.FlightId }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.FlightId })
+                    @Html.ActionLink("Edit", "Edit", new { id = item.FlightId }, new { id = "edit" }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.FlightId }, new { id = "details" }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.FlightId }, new { id = "delete" })
                 </td>
             </tr>
         }
