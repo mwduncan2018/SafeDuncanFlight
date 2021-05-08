@@ -9,6 +9,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
+using System.Web.Http.Results;
 using DemoWeb.Models;
 
 namespace DemoWeb.Controllers
@@ -79,13 +80,29 @@ namespace DemoWeb.Controllers
             db.WatchList.Add(watchListEntry);
             await db.SaveChangesAsync();
 
-            return CreatedAtRoute("DefaultApi", new { id = watchListEntry.WatchListEntryId }, watchListEntry);
+            CreatedAtRouteNegotiatedContentResult<WatchListEntry> contentResult = CreatedAtRoute("DefaultApi", new { id = watchListEntry.WatchListEntryId }, watchListEntry);
+            return contentResult;
         }
 
         [ResponseType(typeof(WatchListEntry))]
         public async Task<IHttpActionResult> DeleteWatchListEntry(int id)
         {
             WatchListEntry watchListEntry = await db.WatchList.FindAsync(id);
+            if (watchListEntry == null)
+            {
+                return NotFound();
+            }
+
+            db.WatchList.Remove(watchListEntry);
+            await db.SaveChangesAsync();
+
+            return Ok(watchListEntry);
+        }
+
+        [ResponseType(typeof(WatchListEntry))]
+        public async Task<IHttpActionResult> DeleteWatchListEntryByName(string firstName, string lastName)
+        {
+            WatchListEntry watchListEntry = db.WatchList.FirstOrDefault(x => (firstName == x.FirstName) && (lastName == x.LastName));
             if (watchListEntry == null)
             {
                 return NotFound();
@@ -105,6 +122,7 @@ namespace DemoWeb.Controllers
             }
             base.Dispose(disposing);
         }
+
 
         private bool WatchListEntryExists(int id)
         {

@@ -81,3 +81,9 @@ C:\dev\CSharp\VisualStudioProjects\DemoWeb\DemoWeb\DemoWeb\obj\Release\DemoWeb.c
 C:\dev\CSharp\VisualStudioProjects\DemoWeb\DemoWeb\DemoWeb\obj\Release\DemoWeb.csproj.CopyComplete
 C:\dev\CSharp\VisualStudioProjects\DemoWeb\DemoWeb\DemoWeb\obj\Release\DemoWeb.dll
 C:\dev\CSharp\VisualStudioProjects\DemoWeb\DemoWeb\DemoWeb\obj\Release\DemoWeb.pdb
+C:\dev\CSharp\VisualStudioProjects\DemoWeb\DemoWeb\DemoWeb\bin\System.Net.Http.Formatting.dll
+C:\dev\CSharp\VisualStudioProjects\DemoWeb\DemoWeb\DemoWeb\bin\System.Web.Http.dll
+C:\dev\CSharp\VisualStudioProjects\DemoWeb\DemoWeb\DemoWeb\bin\System.Web.Http.WebHost.dll
+C:\dev\CSharp\VisualStudioProjects\DemoWeb\DemoWeb\DemoWeb\bin\System.Net.Http.Formatting.xml
+C:\dev\CSharp\VisualStudioProjects\DemoWeb\DemoWeb\DemoWeb\bin\System.Web.Http.xml
+C:\dev\CSharp\VisualStudioProjects\DemoWeb\DemoWeb\DemoWeb\bin\System.Web.Http.WebHost.xml

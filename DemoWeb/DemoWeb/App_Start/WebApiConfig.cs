@@ -23,13 +23,23 @@ namespace DemoWeb
                 defaults: new { controller = "ApiWatchListEntries", id = RouteParameter.Optional }
             );
 
-            /*
+            config.Routes.MapHttpRoute(
+                name: "PostWatchListEntry",
+                routeTemplate: "api/watchlist/post",
+                defaults: new { controller = "ApiWatchListEntries", action = "PostWatchListEntry" }
+            );
+
+            config.Routes.MapHttpRoute(
+                name: "DeleteWatchListEntryByName",
+                routeTemplate: "api/watchlist/delete",
+                defaults: new { controller = "ApiWatchListEntries", action = "DeleteWatchListEntryByName" }
+            );
+
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
-            */        
 
             // Send JSON instead of XML
             GlobalConfiguration.Configuration.Formatters.JsonFormatter.MediaTypeMappings
